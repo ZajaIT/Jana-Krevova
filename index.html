@@ -1072,12 +1072,33 @@
   width:100%;
 }
 
+.about-photo-mobile::before{
+  content:"";
+  position:absolute;
+  left:-10px;
+  top:18px;
+  width:88%;
+  height:92%;
+  border:1px solid var(--gold);
+}
+
+.about-photo-mobile::after{
+  content:"";
+  position:absolute;
+  right:-10px;
+  top:18px;
+  width:88%;
+  height:92%;
+  border:1px solid var(--gold);
+}
+
 .about-photo-mobile img{
   display:block;
-  width:100%;
-  height:auto;
   position:relative;
   z-index:1;
+  width:100%;
+  height:auto;
+  object-fit:contain;
 }
 
       .about-highlights{
