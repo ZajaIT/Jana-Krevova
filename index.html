@@ -384,6 +384,10 @@
       max-width:500px;
     }
 
+    .about-photo-mobile{
+  display:none;
+}
+
     .about-photo::before{
       content:"";
       position:absolute;
@@ -1057,6 +1061,25 @@
         top:18px;
       }
 
+      .about-grid > .about-photo{
+  display:none;
+}
+
+.about-photo-mobile{
+  display:block;
+  position:relative;
+  margin:24px auto 32px;
+  width:100%;
+}
+
+.about-photo-mobile img{
+  display:block;
+  width:100%;
+  height:auto;
+  position:relative;
+  z-index:1;
+}
+
       .about-highlights{
         grid-template-columns:1fr;
       }
@@ -1188,6 +1211,10 @@
     <div class="about-copy reveal">
       <h2 class="section-title">O mně</h2>
       <span class="eyebrow">Jana Krevová</span>
+
+      <div class="about-photo-mobile">
+  <img src="jana-krevova.webp" alt="Jana Krevová - kosmetička Blansko">
+</div>
 
       <p>V oboru kosmetiky pracuji od roku 2003. Za tu dobu jsem získala dlouholeté zkušenosti, které pravidelně doplňuji dalším vzděláváním a sledováním nejnovějších trendů v oblasti kosmetiky, masážních technik i složení produktů.</p>
 
