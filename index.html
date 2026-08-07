@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kosmetika Jana Krevová | Blansko</title>
+  <meta name="description" content="Kosmetika Jana Krevová v Blansku. Profesionální kosmetické ošetření pleti, kosmetické rituály PHYRIS, ALCINA, lash lifting, barvení obočí a řas, depilace, AHA systém, V-CARBON a dárkové poukazy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --white:#ffffff;
+      --black:#111111;
+      --text:#2b2b2b;
+      --muted:#111111;
+      --gold:#c7a64c;
+      --gold-dark:#a7893c;
+      --soft:#faf8f3;
+      --line:#e7ddc6;
+      --container:1240px;
+      --header-h:92px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+  scroll-behavior:smooth;
+  scroll-padding-top:var(--header-h);
+}
+
+    body{
+      font-family:"Montserrat",sans-serif;
+      color:var(--text);
+      background:#fff;
+      overflow-x:hidden;
+      line-height:1.7;
+    }
+
+    body.menu-open{
+      overflow:hidden;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input,
+    textarea{
+      font:inherit;
+    }
+
+    .container{
+      width:min(92%,var(--container));
+      margin:auto;
+    }
+
+    .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:var(--gold-dark);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:28px;
+}
+
+.eyebrow::before,
+.eyebrow::after{
+  content:"";
+  width:42px;
+  height:1px;
+  background:var(--gold);
+  flex-shrink:0;
+}
+
+    .section-title{
+  font-family:"Fahkwang",sans-serif;
+  font-size:clamp(34px,4vw,48px);
+  line-height:1.15;
+  color:var(--black);
+  font-weight:300;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+
+    .section-lead{
+      color:var(--muted);
+      max-width:760px;
+      font-size:16px;
+    }
+
+    .btn{
+      min-height:52px;
+      padding:0 28px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid var(--gold);
+      transition:.25s ease;
+      cursor:pointer;
+      font-size:13px;
+      font-weight:600;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .btn-gold{
+      background:var(--gold);
+      color:#111;
+    }
+
+    .btn-gold:hover{
+      background:transparent;
+      color:#fff;
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:#111;
+    }
+
+    .btn-outline:hover{
+      background:#111;
+      color:#fff;
+      border-color:#111;
+    }
+
+    /* HEADER */
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height:var(--header-h);
+      z-index:1000;
+      background:#fff;
+      border-bottom:1px solid rgba(199,166,76,.28);
+      backdrop-filter:blur(10px);
+    }
+
+    .nav-wrap{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand img{
+      width:82px;
+      height:82px;
+      object-fit:contain;
+    }
+
+    .desktop-nav{
+      display:flex;
+      gap:34px;
+      align-items:center;
+    }
+
+    .desktop-nav a{
+      position:relative;
+      font-size:13px;
+      font-weight:500;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      padding:8px 0;
+    }
+
+    .desktop-nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:2px;
+      width:0;
+      height:1px;
+      background:var(--gold);
+      transition:.25s ease;
+    }
+
+    .desktop-nav a:hover::after{
+      width:100%;
+    }
+
+.desktop-nav a.active::after{
+  width:100%;
+}
+
+    .menu-toggle{
+      display:none;
+      width:44px;
+      height:44px;
+      border:0;
+      background:transparent;
+      position:relative;
+      cursor:pointer;
+      z-index:1002;
+    }
+
+    .menu-toggle span{
+      position:absolute;
+      left:8px;
+      width:28px;
+      height:1.5px;
+      background:#111;
+      transition:.25s ease;
+    }
+
+    .menu-toggle span:nth-child(1){top:14px;}
+    .menu-toggle span:nth-child(2){top:21px;}
+    .menu-toggle span:nth-child(3){top:28px;}
+
+    .menu-toggle.active span:nth-child(1){
+      transform:translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2){
+      opacity:0;
+    }
+
+    .menu-toggle.active span:nth-child(3){
+      transform:translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-nav{
+      display:none;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      padding-top:var(--header-h);
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(90deg,rgba(0,0,0,.62) 0%,rgba(0,0,0,.42) 34%,rgba(0,0,0,.12) 60%,rgba(0,0,0,.02) 100%),
+        url("hero.webp") 30% top / cover no-repeat;
+      animation:heroBackground 1.1s ease-out both;
+    }
+
+@keyframes heroBackground{
+  from{
+    opacity:0;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+    .hero-content{
+      max-width:650px;
+      padding:90px 0 80px;
+      color:#fff;
+    }
+
+    .hero-kicker{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      color:#f1dfae;
+      font-size:12px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      margin-bottom:22px;
+      opacity:0;
+      transform:translateY(28px);
+      animation:heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+      animation-delay:.15s;
+    }
+
+    .hero-kicker::before{
+      content:"";
+      width:42px;
+      height:1px;
+      background:var(--gold);
+    }
+
+.hero-kicker::after{
+  content:"";
+  width:42px;
+  height:1px;
+  background:var(--gold);
+}
+
+    .hero h1{
+  font-family:"Fahkwang",sans-serif;
+  font-size:clamp(52px,6vw,82px);
+  line-height:1.08;
+  font-weight:300;
+  letter-spacing:-0.02em;
+  margin-bottom:24px;
+  text-transform:uppercase;
+  opacity:0;
+  transform:translateY(28px);
+  animation:heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+   animation-delay:.30s;
+}
+
+    .hero p{
+      max-width:560px;
+      color:rgba(255,255,255,.88);
+      font-size:17px;
+      margin-bottom:34px;
+      opacity:0;
+      transform:translateY(28px);
+      animation:heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+      animation-delay:.45s;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      opacity:0;
+      transform:translateY(28px);
+      animation:heroReveal .9s cubic-bezier(.22,.61,.36,1) forwards;
+      animation-delay:.60s;
+    }
+
+    @keyframes heroReveal{
+  from{
+    opacity:0;
+    transform:translateY(28px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+    .hero .btn-outline{
+      color:#fff;
+      border-color:rgba(255,255,255,.8);
+    }
+
+    .hero .btn-outline:hover{
+      background:#fff;
+      color:#111;
+      border-color:#fff;
+    }
+
+    /* ABOUT */
+
+    .about{
+      padding:120px 0;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);
+      gap:90px;
+      align-items:center;
+    }
+
+    .about-photo{
+      position:relative;
+      max-width:500px;
+    }
+
+    .about-photo::before{
+      content:"";
+      position:absolute;
+      left:-22px;
+      top:34px;
+      width:88%;
+      height:92%;
+      border:1px solid var(--gold);
+    }
+
+.about-photo::after{
+  content:"";
+  position:absolute;
+  right:-22px;
+  top:34px;
+  width:88%;
+  height:92%;
+  border:1px solid var(--gold);
+}
+
+    .about-photo img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+    .about-copy p{
+      margin-bottom:16px;
+      color:#4d4d4d;
+    }
+
+.about-signature{
+  display:flex;
+  justify-content:flex-end;
+  margin:18px 0 22px;
+  padding-right:5px;
+}
+
+.about-signature img{
+  width:190px;
+  max-width:45%;
+  height:auto;
+  object-fit:contain;
+}
+
+    .about-highlights{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      margin-top:34px;
+      border-top:1px solid var(--gold);
+      border-bottom:1px solid var(--gold);
+    }
+
+    .highlight{
+      padding:12px 16px;
+      text-align:center;
+    }
+
+    .highlight + .highlight{
+      border-left:1px solid var(--gold);
+    }
+
+    .highlight strong{
+  display:block;
+  font-family:"Fahkwang",sans-serif;
+  font-size:22px;
+  font-weight:700;
+  color:#111;
+  line-height:1.2;
+  margin-bottom:1px;
+}
+
+    .highlight span{
+      color:var(--muted);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    /* SERVICES */
+
+    .services{
+  padding:110px 0;
+  background:#f3ecdc;
+  border-top:1px solid #d8c89e;
+  border-bottom:1px solid #d8c89e;
+}
+
+    .services-head{
+  display:block;
+  text-align:center;
+  margin-bottom:56px;
+}
+
+    .services-head .section-lead{
+  max-width:760px;
+  margin:0 auto;
+}
+
+    .services-list{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      border-top:1px solid #d8c89e;
+      border-left:1px solid #d8c89e;
+    }
+
+    .service-item{
+      min-height:180px;
+      padding:30px 28px;
+      border-right:1px solid #d8c89e;
+      border-bottom:1px solid #d8c89e;
+      background:#fff;
+    }
+
+    .service-num{
+      display:block;
+      color:var(--gold-dark);
+      font-size:11px;
+      letter-spacing:.18em;
+      margin-bottom:14px;
+    }
+
+.service-item h3{
+  font-family:"Fahkwang",sans-serif;
+  font-size:24px;
+  line-height:1.2;
+  color:#111;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+    .service-item p{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    /* COSMETICS */
+
+    .cosmetics{
+      padding:120px 0;
+    }
+
+    .cosmetics-intro{
+      text-align:center;
+      margin-bottom:62px;
+    }
+
+    .cosmetics-intro .section-lead{
+      margin:auto;
+    }
+
+    .phryis-block{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      border:1px solid var(--gold);
+      min-height:430px;
+      margin-bottom:28px;
+    }
+
+    .phryis-main{
+      position:relative;
+      overflow:hidden;
+      background:#121212;
+      color:#fff;
+      padding:62px;
+    }
+
+    .phryis-main::after{
+      content:"PHYRIS";
+      position:absolute;
+      right:-16px;
+      bottom:-48px;
+      font-family:"Cormorant Garamond",serif;
+      font-size:150px;
+      color:rgba(199,166,76,.08);
+      letter-spacing:.05em;
+    }
+
+    .phryis-main .eyebrow{
+      color:#ddc780;
+    }
+
+    .phryis-main h3{
+  font-family:"Cormorant Garamond",serif;
+  font-size:64px;
+  line-height:1;
+  margin:8px 0 22px;
+}
+
+    .phryis-main p{
+      max-width:560px;
+      color:rgba(255,255,255,.78);
+      margin-bottom:16px;
+    }
+
+    .phryis-note{
+      border-left:2px solid var(--gold);
+      padding-left:18px;
+      color:#f0dfad !important;
+      margin-top:26px;
+    }
+
+    .phryis-side{
+      padding:56px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .phryis-side h4{
+  font-family:"Fahkwang",sans-serif;
+  font-size:30px;
+  font-weight:600;
+  color:#111;
+  margin-bottom:16px;
+}
+
+    .phryis-side ul{
+      list-style:none;
+    }
+
+    .phryis-side li{
+  position:relative;
+  padding:12px 0 12px 22px;
+  border-bottom:1px solid var(--gold);
+  color:#111;
+}
+
+    .phryis-side li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:21px;
+      width:6px;
+      height:6px;
+      border:1.5px solid var(--gold);
+      transform:rotate(45deg);
+    }
+
+    .alcina{
+      display:grid;
+      grid-template-columns:.6fr 1.4fr;
+      gap:50px;
+      align-items:center;
+      padding:46px 56px;
+      border:1px solid var(--gold);
+    }
+
+    .alcina h3{
+      font-family:"Cormorant Garamond",serif;
+      font-size:46px;
+      color:#111;
+      line-height:1;
+      font-weight:600;
+    }
+
+    .alcina p{
+      color:var(--muted);
+    }
+
+    /* VOUCHERS */
+
+    .vouchers{
+      padding:115px 0;
+      background:#111;
+      color:#fff;
+    }
+
+    .voucher-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:80px;
+      align-items:center;
+    }
+
+    .voucher-copy .section-title{
+      color:#fff;
+    }
+
+    .voucher-copy p{
+      max-width:560px;
+      color:rgba(255,255,255,.75);
+      margin-bottom:18px;
+    }
+
+    .voucher-copy .btn-outline{
+      color:#fff;
+      border-color:var(--gold);
+      margin-top:12px;
+    }
+
+    .voucher-copy .btn-outline:hover{
+      background:var(--gold);
+      color:#111;
+    }
+
+    .voucher-photo{
+      position:relative;
+    }
+
+    .voucher-photo::before{
+      content:"";
+      position:absolute;
+      inset:-16px 16px 16px -16px;
+      border:1px solid rgba(199,166,76,.8);
+    }
+
+.voucher-photo::after{
+  content:"";
+  position:absolute;
+  inset:16px -16px -16px 16px;
+  border:1px solid rgba(199,166,76,.8);
+}
+
+    .voucher-photo img{
+      position:relative;
+      z-index:1;
+      width:100%;
+      max-height:560px;
+      object-fit:cover;
+      background:#fff;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      padding:120px 0 80px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:90px;
+      align-items:start;
+    }
+
+    .contact-details{
+      margin-top:5px;
+    }
+
+.contact-label{
+  display:flex !important;
+  align-items:center;
+  gap:7px;
+}
+
+.contact-label svg{
+  width:14px;
+  height:14px;
+  fill:var(--gold);
+  flex-shrink:0;
+}
+
+    .contact-row{
+  padding:12px 0;
+  border-bottom:1px solid var(--gold);
+}
+
+    .contact-row small{
+      display:block;
+      color:var(--gold);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      margin-bottom:4px;
+    }
+
+    .contact-row strong,
+    .contact-row a{
+      color:#222;
+      font-size:16px;
+      font-weight:500;
+    }
+
+    .contact-map{
+  margin-top:34px;
+  width:100%;
+  height:130px;
+  border:1px solid var(--gold);
+  overflow:hidden;
+}
+
+.contact-map iframe{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+    .contact-form{
+      background:var(--soft);
+      border:1px solid #ece2cc;
+      padding:48px;
+    }
+
+    .contact-form h3{
+  font-family:"Fahkwang",sans-serif;
+  font-size:40px;
+  font-weight:500;
+  line-height:1.2;
+  color:#111;
+  margin-bottom:10px;
+  text-transform:uppercase;
+}
+
+    .contact-form > p{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:28px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .field.full{
+      grid-column:1/-1;
+    }
+
+    .field label{
+      color:#111;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .field input,
+    .field textarea{
+      width:100%;
+      border:0;
+      border-bottom:1px solid #b7aa8e;
+      background:transparent;
+      outline:none;
+      padding:12px 2px;
+      border-radius:0;
+    }
+
+    .field input:focus,
+    .field textarea:focus{
+      border-color:var(--gold);
+    }
+
+    .field textarea{
+  min-height:130px;
+  resize:none;
+}
+
+    .form-submit{
+      width:100%;
+      margin-top:24px;
+      padding:15px 22px;
+      border:1px solid var(--gold);
+      background:var(--gold);
+      color:#111;
+      cursor:pointer;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-size:12px;
+      font-weight:600;
+      transition:.25s ease;
+    }
+
+    .form-submit:hover{
+      background:#111;
+      border-color:#111;
+      color:#fff;
+    }
+
+    .form-note{
+      font-size:11px;
+      color:#888;
+      margin-top:14px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#0d0d0d;
+      color:#fff;
+      border-top:2px solid var(--gold);
+      padding:32px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:center;
+      color:rgba(255,255,255,.65);
+      font-size:12px;
+    }
+
+    .footer-inner strong{
+      color:#fff;
+      font-weight:500;
+    }
+
+    .footer-credit a{
+      color:#d9bf7b;
+    }
+
+    /* REVEAL */
+
+    .reveal{
+      opacity:0;
+      transform:translateY(20px);
+      transition:opacity .65s ease,transform .65s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media(max-width:980px){
+      :root{
+        --header-h:78px;
+      }
+
+      .brand img{
+        width:68px;
+        height:68px;
+      }
+
+      .desktop-nav{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .mobile-nav{
+        display:flex;
+        position:fixed;
+        top:var(--header-h);
+        left:0;
+        right:0;
+        z-index:999;
+        background:#fff;
+        border-top:1px solid var(--line);
+        border-bottom:1px solid var(--line);
+        flex-direction:column;
+        padding:18px 4%;
+        transform:translateY(-130%);
+        opacity:0;
+        visibility:hidden;
+        transition:.3s ease;
+      }
+
+      .mobile-nav.open{
+        transform:translateY(0);
+        opacity:1;
+        visibility:visible;
+      }
+
+      .mobile-nav a{
+        padding:14px 2px;
+        border-bottom:1px solid #eee7d8;
+        text-transform:uppercase;
+        letter-spacing:.12em;
+        font-size:13px;
+      }
+
+      .mobile-nav a:last-child{
+        border-bottom:0;
+      }
+
+      .hero{
+        background-position:62% center;
+      }
+
+      .about-grid,
+      .voucher-grid,
+      .contact-grid,
+      .phryis-block{
+        grid-template-columns:1fr;
+      }
+
+      .about-grid{
+        gap:55px;
+      }
+
+      .about-photo{
+        margin:auto;
+      }
+
+      .services-head{
+        display:block;
+      }
+
+      .services-head .section-lead{
+        margin-top:18px;
+      }
+
+      .services-list{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .phryis-main,
+      .phryis-side{
+        padding:46px 38px;
+      }
+
+      .alcina{
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .voucher-grid,
+      .contact-grid{
+        gap:55px;
+      }
+    }
+
+    @media(max-width:680px){
+      .container{
+        width:min(90%,var(--container));
+      }
+
+      .hero{
+        min-height:100svh;
+        align-items:flex-end;
+        background-position:68% center;
+        background-image:
+          linear-gradient(180deg,rgba(0,0,0,.03) 10%,rgba(0,0,0,.22) 45%,rgba(0,0,0,.75) 100%),
+          url("hero.webp");
+      }
+
+      .hero-content{
+        padding:120px 0 50px;
+      }
+
+      .hero h1{
+        font-size:54px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .about,
+      .cosmetics,
+      .contact,
+      .services,
+      .vouchers{
+        padding:86px 0;
+      }
+
+      .about-photo::before{
+        left:-10px;
+        top:18px;
+      }
+
+      .about-highlights{
+        grid-template-columns:1fr;
+      }
+
+      .highlight + .highlight{
+        border-left:0;
+        border-top:1px solid var(--line);
+      }
+
+      .services-list{
+        grid-template-columns:1fr;
+      }
+
+      .service-item{
+        min-height:auto;
+        padding:26px 22px;
+      }
+
+      .phryis-main,
+      .phryis-side{
+        padding:36px 24px;
+      }
+
+      .phryis-main h3{
+        font-size:48px;
+      }
+
+      .phryis-main::after{
+        font-size:88px;
+      }
+
+      .alcina{
+        padding:30px 24px;
+      }
+
+      .voucher-photo::before{
+        inset:-10px 10px 10px -10px;
+      }
+
+      .contact-form{
+        padding:30px 22px;
+      }
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .field.full{
+        grid-column:auto;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:7px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<script>
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  window.scrollTo(0, 0);
+</script>
+
+<header>
+  <div class="container nav-wrap">
+    <a href="#domu" class="brand" aria-label="Kosmetika Jana Krevová">
+      <img src="logo.jpg" alt="Logo Kosmetika Jana Krevová">
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#domu">Domů</a>
+      <a href="#o-mne">O mně</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#kosmetika">Kosmetika</a>
+      <a href="#poukazy">Poukazy</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav">
+    <a href="#domu">Domů</a>
+    <a href="#o-mne">O mně</a>
+    <a href="#sluzby">Služby</a>
+    <a href="#kosmetika">Kosmetika</a>
+    <a href="#poukazy">Poukazy</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="domu">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-kicker">Krása začíná péčí</div>
+
+<h1>Kosmetika<br>Jana Krevová</h1>
+
+<p>
+  Profesionální kosmetické ošetření v Blansku. Kvalitní péče s přední kosmetickou značkou PHYRIS.
+</p>
+
+      <div class="hero-actions">
+        <a href="#sluzby" class="btn btn-gold">Prohlédnout služby</a>
+        <a href="#kontakt" class="btn btn-outline">Objednat se</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="o-mne">
+  <div class="container about-grid">
+
+    <div class="about-photo reveal">
+      <img src="jana-krevova.webp" alt="Jana Krevová - kosmetička Blansko">
+    </div>
+
+    <div class="about-copy reveal">
+      <h2 class="section-title">O mně</h2>
+      <span class="eyebrow">Jana Krevová</span>
+
+      <p>V oboru kosmetiky pracuji od roku 2003. Za tu dobu jsem získala dlouholeté zkušenosti, které pravidelně doplňuji dalším vzděláváním a sledováním nejnovějších trendů v oblasti kosmetiky, masážních technik i složení produktů.</p>
+
+      <p>Pracuji s profesionální kosmetikou <strong>PHYRIS</strong> a <strong>ALCINA</strong>, které spojují moderní poznatky s maximální šetrností k pokožce. Hlavní místo v mé práci má PHYRIS a jeho kosmetické rituály.</p>
+
+      <p>Práce v kosmetice mě velmi baví a je pro mě zároveň koníčkem. Každé klientce věnuji individuální péči přesně podle aktuálních potřeb.</p>
+
+      <div class="about-signature">
+  <img src="jana-krevova-podpis.jpeg" alt="Podpis Jana Krevová">
+</div>
+
+      <div class="about-highlights">
+        <div class="highlight">
+          <strong>od 2003</strong>
+          <span>praxe v oboru</span>
+        </div>
+        <div class="highlight">
+          <strong>PHYRIS</strong>
+          <span>hlavní kosmetika</span>
+        </div>
+        <div class="highlight">
+          <strong>Individuálně</strong>
+          <span>péče na míru</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="services" id="sluzby">
+  <div class="container">
+
+    <div class="services-head reveal">
+      <div>
+        <h2 class="section-title">Služby</h2>
+        <span class="eyebrow">Péče o pleť a krásu</span>
+      </div>
+      <p class="section-lead">Nabízím široký výběr profesionálních kosmetických ošetření a doplňkových služeb.</p>
+    </div>
+
+    <div class="services-list reveal">
+
+      <article class="service-item">
+        <span class="service-num">01</span>
+        <h3>Ošetření pleti</h3>
+        <p>Profesionální péče značkou PHYRIS a ALCINA.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">02</span>
+        <h3>Cesta krásy s PHYRIS</h3>
+        <p>Kosmetické rituály zaměřené na potřeby vaší pleti.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">03</span>
+        <h3>AHA systém Professional</h3>
+        <p>Kosmetická péče s novou generací ovocných kyselin.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">04</span>
+        <h3>V-CARBON</h3>
+        <p>Královská peelingová péče.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">05</span>
+        <h3>Ultrazvuková špachtle</h3>
+        <p>Šetrné hloubkové čištění pleti ultrazvukovou špachtlí.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">06</span>
+        <h3>Barvení obočí a řas</h3>
+        <p>Úprava a zvýraznění obočí a řas.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">07</span>
+        <h3>Lash lifting</h3>
+        <p>Úprava a zvýraznění přirozených řas.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">08</span>
+        <h3>Depilace teplým voskem</h3>
+        <p>Profesionální depilace vybraných partií teplým voskem.</p>
+      </article>
+
+      <article class="service-item">
+        <span class="service-num">09</span>
+        <h3>Poradenství a prodej</h3>
+        <p>Poradenství a prodej profesionální kosmetiky PHYRIS a ALCINA.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="cosmetics" id="kosmetika">
+  <div class="container">
+
+    <div class="cosmetics-intro reveal">
+      <h2 class="section-title center">Kosmetika</h2>
+      <span class="eyebrow">Profesionální péče</span>
+      <p class="section-lead">Při ošetřeních pracuji s profesionálními značkami PHYRIS a ALCINA.</p>
+    </div>
+
+    <div class="phryis-block reveal">
+      <div class="phryis-main">
+        <span class="eyebrow">Hlavní značka salonu</span>
+        <h3>PHYRIS</h3>
+        <p>Profesionální kosmetická péče, která propojuje moderní poznatky, účinné aktivní látky a příjemné kosmetické rituály.</p>
+        <p>Ošetření vždy volím podle aktuálního stavu pleti a požadovaného výsledku.</p>
+        <p class="phryis-note">Vysoce efektivní a dobře snášenlivá kosmetika. Obsahuje rostlinné extrakty, jemné ovocné kyseliny, rostlinné kmenové buňky, niacinamid, kyselinu hyaluronovou a jiné efektivní látky.</p>
+      </div>
+
+      <div class="phryis-side">
+        <h4>Péče s PHYRIS</h4>
+        <ul>
+          <li>Kosmetické rituály Cesta krásy</li>
+          <li>Profesionální ošetření pleti</li>
+          <li>AHA systém Professional</li>
+          <li>Individuální doporučení domácí péče</li>
+          <li>Poradenství a prodej produktů</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="alcina reveal">
+      <h3>ALCINA</h3>
+      <p>Jako další možnost nabízím také profesionální kosmetiku ALCINA. Díky dvěma značkám mohu lépe přizpůsobit péči konkrétním potřebám pleti</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="vouchers" id="poukazy">
+  <div class="container voucher-grid">
+
+    <div class="voucher-copy reveal">
+      <h2 class="section-title">Dárkové poukazy</h2>
+      <span class="eyebrow">Dárek pro chvíli péče</span>
+      <p>Darujte svým blízkým čas pro sebe, odpočinek a profesionální kosmetickou péči.</p>
+      <p>Dárkové poukazy jsou vhodné k narozeninám, Vánocům, výročí nebo jednoduše jako milá pozornost.</p>
+      <a href="#kontakt" class="btn btn-outline">Objednat poukaz</a>
+    </div>
+
+    <div class="voucher-photo reveal">
+      <img src="poukaz.jpeg" alt="Dárkový poukaz Kosmetika Jana Krevová">
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="kontakt">
+  <div class="container contact-grid">
+
+    <div class="contact-info reveal">
+      <h2 class="section-title">Kontakt</h2>
+      <span class="eyebrow">Objednání a informace</span>
+
+
+      <div class="contact-details">
+
+        <div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/>
+    </svg>
+    Adresa salonu
+  </small>
+  <a href="https://www.google.com/maps/search/?api=1&query=Po%C5%99%C3%AD%C4%8D%C3%AD+14a%2C+678+01+Blansko"
+   target="_blank"
+   rel="noopener noreferrer">
+  Poříčí 14a, 678 01 Blansko
+</a>
+</div>
+
+        <div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.6 10.8c1.7 3.3 3.3 4.9 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2Z"/>
+    </svg>
+    Telefon
+  </small>
+
+  <a href="tel:+420606877687">606 877 687</a>
+</div>
+
+        <div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 5h18c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2Zm9 7 8-5H4l8 5Zm0 2.3L3 8.7V17h18V8.7l-9 5.6Z"/>
+    </svg>
+    E-mail
+  </small>
+
+  <a href="mailto:JanaKrevova@seznam.cz">JanaKrevova@seznam.cz</a>
+</div>
+
+        <div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8Zm1-13h-2v6l5.2 3.1 1-1.7-4.2-2.5Z"/>
+    </svg>
+    Provozní doba
+  </small>
+
+  <strong>Dle telefonické domluvy</strong>
+</div>
+
+<div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M13.5 22v-8h2.8l.4-3h-3.2V9.1c0-.9.3-1.5 1.6-1.5h1.7V4.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V11H7.3v3h2.8v8h3.4Z"/>
+    </svg>
+    Facebook
+  </small>
+
+  <a href="https://www.facebook.com/profile.php?id=100064182368114"
+     target="_blank"
+     rel="noopener noreferrer">
+    Kosmetika Alcina – Jana Krevová
+  </a>
+</div>
+
+<div class="contact-row">
+  <small class="contact-label">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm-.2 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.5 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+    </svg>
+    Instagram
+  </small>
+
+  <a href="https://www.instagram.com/kosmetika.janakrevova"
+     target="_blank"
+     rel="noopener noreferrer">
+    @kosmetika.janakrevova
+  </a>
+</div>
+
+
+      </div>
+
+
+      <div class="contact-map">
+  <iframe
+    src="https://www.google.com/maps?q=Po%C5%99%C3%AD%C4%8D%C3%AD%2014a%2C%20678%2001%20Blansko&output=embed"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Mapa - Kosmetika Jana Krevová, Poříčí 14a, Blansko">
+  </iframe>
+</div>
+    </div>
+
+    <div class="contact-form reveal">
+      <h3>Napište mi</h3>
+      <p>Máte zájem o ošetření nebo se chcete na něco zeptat? Napište mi zprávu.</p>
+
+      <form action="#" method="POST" id="contactForm">
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="name">Jméno</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <div class="field full">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="field full">
+            <label for="message">Zpráva</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+        </div>
+
+        <button type="submit" class="form-submit">Odeslat zprávu</button>
+        <p class="form-note">Formulář je zatím připravený vzhledově - zprovozním jej později.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 <strong>Kosmetika Jana Krevová</strong> · IČO 756 09 754</div>
+    <div class="footer-credit">Designed by <a href="https://zajait.cz/" target="_blank" rel="noopener noreferrer">ZajaIT</a></div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileNav = document.querySelector(".mobile-nav");
+
+  function closeMenu(){
+    menuToggle.classList.remove("active");
+    mobileNav.classList.remove("open");
+    document.body.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded","false");
+  }
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileNav.classList.toggle("open");
+    menuToggle.classList.toggle("active", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  mobileNav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (e) => {
+    if(
+      mobileNav.classList.contains("open") &&
+      !mobileNav.contains(e.target) &&
+      !menuToggle.contains(e.target)
+    ){
+      closeMenu();
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Formulář zatím není napojený. Před zveřejněním doplníme Formspree.");
+  });
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      navLinks.forEach(link => link.classList.remove("active"));
+
+      if(entry.target.id !== "domu"){
+        const activeLink = document.querySelector(
+          `.desktop-nav a[href="#${entry.target.id}"]`
+        );
+
+        if(activeLink){
+          activeLink.classList.add("active");
+        }
+      }
+    }
+  });
+}, {
+  rootMargin:"-35% 0px -55% 0px",
+  threshold:0
+});
+
+sections.forEach(section => sectionObserver.observe(section));
+</script>
+
+</body>
+</html>
