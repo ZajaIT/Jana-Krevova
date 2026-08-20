@@ -997,11 +997,15 @@
       color:#fff;
     }
 
-    .form-note{
-      font-size:11px;
-      color:#888;
-      margin-top:14px;
-    }
+    .form-success{
+  display:none;
+  margin-top:18px;
+  text-align:center;
+  color:var(--gold-dark);
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:.03em;
+}
 
     /* FOOTER */
 
@@ -1877,8 +1881,12 @@
         </div>
 
         <button type="submit" class="form-submit">Odeslat zprávu</button>
-        <p class="form-note">Formulář je zatím připravený vzhledově - zprovozním jej později.</p>
-      </form>
+
+<p id="form-success" class="form-success">
+  Vaše zpráva byla odeslána.
+</p>
+
+</form>
     </div>
 
   </div>
@@ -1961,6 +1969,32 @@ const sectionObserver = new IntersectionObserver((entries) => {
 });
 
 sections.forEach(section => sectionObserver.observe(section));
+
+  const contactForm = document.getElementById("contactForm");
+const formSuccess = document.getElementById("form-success");
+
+contactForm.addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      contactForm.reset();
+      formSuccess.style.display = "block";
+    }
+  } catch (error) {
+    console.error("Chyba při odesílání formuláře:", error);
+  }
+});
 </script>
 
 </body>
