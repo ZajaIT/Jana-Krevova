@@ -1849,7 +1849,9 @@
       <h3>Napište mi</h3>
       <p>Máte zájem o ošetření nebo se chcete na něco zeptat? Napište mi zprávu.</p>
 
-      <form action="#" method="POST" id="contactForm">
+      <form action="https://formspree.io/f/xljrzddv" method="POST" id="contactForm">
+
+        <input type="hidden" name="_cc" value="azajicova2@seznam.cz">
         <div class="form-grid">
 
           <div class="field">
@@ -1933,11 +1935,6 @@
   }, {threshold:0.12});
 
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("Formulář zatím není napojený. Před zveřejněním doplníme Formspree.");
-  });
 
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll('.desktop-nav a[href^="#"]');
